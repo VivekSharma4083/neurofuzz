@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuroFuzz — Research Dashboard & State Frontier Explorer</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    :root {
+      --background: #090d16;
+      --card: #111827;
+      --border: #1f2937;
+      --foreground: #f3f4f6;
+      --muted-foreground: #9ca3af;
+      --primary: #3b82f6;
+      --primary-foreground: #ffffff;
+      --accent: #10b981;
+      --accent-purple: #8b5cf6;
+      --accent-red: #ef4444;
+      --accent-amber: #f59e0b;
+    }
+    body {
+      background-color: var(--background);
+      color: var(--foreground);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    .badge {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .pulse-glow {
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+    }
+  </style>
+</head>
+<body class="min-h-screen antialiased">
+  <!-- Top Navigation Bar -->
+  <header class="border-b border-[var(--border)] bg-[#0d1322] sticky top-0 z-50 px-6 py-3.5 flex flex-wrap items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center font-black text-white text-lg shadow-md shadow-blue-500/30">
+        NF
+      </div>
+      <div>
+        <div class="flex items-center gap-2">
+          <h1 class="text-base font-bold text-white tracking-tight">NeuroFuzz</h1>
+          <span class="badge bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Frozen Release</span>
+          <span class="badge bg-blue-500/20 text-blue-400 border border-blue-500/30">Phase 9</span>
+        </div>
+        <p class="text-xs text-[var(--muted-foreground)]">AI-Guided Structured Coverage-Driven Fuzzer</p>
+      </div>
+    </div>
+    
+    <div class="flex items-center gap-3 text-xs">
+      <div class="hidden sm:flex items-center gap-2 bg-[#162032] px-3 py-1.5 rounded-lg border border-[var(--border)]">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="text-gray-300 font-medium">Harness: Persistent Win64 IPC (&gt;870 exec/s)</span>
+      </div>
+      <a href="https://github.com/VivekSharma4083/neurofuzz" target="_blank" class="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-500 text-white font-medium px-3.5 py-1.5 rounded-lg shadow-sm transition">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub Repo
+      </a>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <div class="border-b border-[var(--border)] bg-[#0d1322]/80 px-6 backdrop-blur">
+    <nav class="flex space-x-6 overflow-x-auto text-sm" id="tabNav">
+      <button onclick="switchTab('overview')" class="tab-btn py-3 font-medium border-b-2 border-blue-500 text-blue-400" id="tab-overview">Overview & Findings</button>
+      <button onclick="switchTab('ablation')" class="tab-btn py-3 font-medium border-b-2 border-transparent text-gray-400 hover:text-gray-200" id="tab-ablation">11-Config Ablation Matrix</button>
+      <button onclick="switchTab('statemachine')" class="tab-btn py-3 font-medium border-b-2 border-transparent text-gray-400 hover:text-gray-200" id="tab-statemachine">Sequential State Machine</button>
+      <button onclick="switchTab('simulator')" class="tab-btn py-3 font-medium border-b-2 border-transparent text-gray-400 hover:text-gray-200" id="tab-simulator">Interactive Fuzzing Simulator</button>
+      <button onclick="switchTab('plots')" class="tab-btn py-3 font-medium border-b-2 border-transparent text-gray-400 hover:text-gray-200" id="tab-plots">Publication Plots (13 Figures)</button>
+    </nav>
+  </div>
+
+  <main class="max-w-7xl mx-auto p-6 space-y-8">
+
+    <!-- TAB 1: OVERVIEW & KEY FINDINGS -->
+    <section id="content-overview" class="space-y-6">
+      <!-- KPI Metric Cards -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 flex flex-col justify-between">
+          <span class="text-xs text-[var(--muted-foreground)] uppercase tracking-wider">Max Protocol Depth</span>
+          <div class="text-2xl font-black text-emerald-400 mt-2">Depth 19</div>
+          <span class="text-[11px] text-emerald-400/80 mt-1 font-medium">100% Reach Rate (&lt;350 iters)</span>
+        </div>
+        <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 flex flex-col justify-between">
+          <span class="text-xs text-[var(--muted-foreground)] uppercase tracking-wider">Baseline Depth</span>
+          <div class="text-2xl font-black text-rose-400 mt-2">Depth 14.8</div>
+          <span class="text-[11px] text-rose-400/80 mt-1 font-medium">0% Reach for D17-19</span>
+        </div>
+        <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 flex flex-col justify-between">
+          <span class="text-xs text-[var(--muted-foreground)] uppercase tracking-wider">Recommended Coverage</span>
+          <div class="text-2xl font-black text-blue-400 mt-2">72.6 <span class="text-sm font-normal text-gray-400">units</span></div>
+          <span class="text-[11px] text-blue-400/80 mt-1 font-medium">+10.8 over baseline</span>
+        </div>
+        <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 flex flex-col justify-between">
+          <span class="text-xs text-[var(--muted-foreground)] uppercase tracking-wider">Coverage Velocity (AUC)</span>
+          <div class="text-2xl font-black text-purple-400 mt-2">1.758M</div>
+          <span class="text-[11px] text-purple-400/80 mt-1 font-medium">Config F (Highest in study)</span>
+        </div>
+        <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 flex flex-col justify-between">
+          <span class="text-xs text-[var(--muted-foreground)] uppercase tracking-wider">Execution Rate</span>
+          <div class="text-2xl font-black text-amber-400 mt-2">876.2 <span class="text-sm font-normal text-gray-400">/s</span></div>
+          <span class="text-[11px] text-amber-400/80 mt-1 font-medium">11.24× Persistent Speedup</span>
+        </div>
+        <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 flex flex-col justify-between">
+          <span class="text-xs text-[var(--muted-foreground)] uppercase tracking-wider">Empirical Trials</span>
+          <div class="text-2xl font-black text-cyan-400 mt-2">1,375,000</div>
+          <span class="text-[11px] text-cyan-400/80 mt-1 font-medium">55 trials × 25k budget</span>
+        </div>
+      </div>
+
+      <!-- Core Research Narrative Hero -->
+      <div class="bg-gradient-to-r from-blue-950/40 via-indigo-950/30 to-purple-950/40 border border-blue-900/40 rounded-2xl p-6 shadow-xl relative overflow-hidden">
+        <div class="max-w-3xl">
+          <span class="badge bg-blue-500/20 text-blue-300 border border-blue-500/30 mb-2 inline-block">Core Research Finding</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mt-1">StateFrontier breaks the sequential protocol barrier</h2>
+          <p class="text-sm text-gray-300 mt-3 leading-relaxed">
+            Conventional point mutations (bitflips, random replacements) fail on multi-step stateful protocols because the probability of synthesizing valid multi-token sequences decreases exponentially (<span class="font-mono text-xs text-blue-300">P ∝ (1/256)<sup>k</sup></span>). Genetic crossover cannot help initially because required tokens (<span class="font-mono text-xs text-blue-300">STEP=2</span>) do not exist anywhere in the initial corpus.
+          </p>
+          <p class="text-sm text-gray-300 mt-2 leading-relaxed">
+            <strong class="text-white">StateFrontier</strong> indexes seeds by their deepest validated state machine depth and targets the terminal structural delimiter with grammar vocabulary. In our 55-trial ablation study, StateFrontier alone drove a <span class="text-emerald-400 font-semibold">+10.20 unit coverage leap</span> and reached Depth 19 in 100% of trials in &lt;350 iterations.
+          </p>
+        </div>
+      </div>
+
+      <!-- Comparative Summary Table -->
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl overflow-hidden shadow-sm">
+        <div class="p-5 border-b border-[var(--border)] flex justify-between items-center">
+          <div>
+            <h3 class="text-base font-semibold text-white">Controlled Benchmark Comparison (Phase 8 Results)</h3>
+            <p class="text-xs text-[var(--muted-foreground)]">Evaluated on <code class="text-gray-300">targets/structured_target.exe</code> with 25,000 executions across 5 deterministic seeds</p>
+          </div>
+          <span class="text-xs bg-[#1f2937] text-gray-300 px-2.5 py-1 rounded border border-gray-700">Authoritative Data</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-gray-300">
+            <thead class="bg-[#162032] text-gray-400 uppercase text-[11px]">
+              <tr>
+                <th class="p-3.5">Configuration</th>
+                <th class="p-3.5">Seed Sched</th>
+                <th class="p-3.5">Frontier</th>
+                <th class="p-3.5">Coverage (Mean ± SD)</th>
+                <th class="p-3.5">Max Depth</th>
+                <th class="p-3.5">T17 Reach</th>
+                <th class="p-3.5">Mean Crashes</th>
+                <th class="p-3.5">Throughput</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[var(--border)]">
+              <tr class="hover:bg-gray-800/40">
+                <td class="p-3.5 font-medium text-gray-200">A: Random Baseline</td>
+                <td class="p-3.5 text-gray-400">Random</td>
+                <td class="p-3.5 text-rose-400 font-semibold">OFF</td>
+                <td class="p-3.5 font-mono">61.8 ± 1.30</td>
+                <td class="p-3.5 text-rose-400 font-bold">14.8 ± 1.10</td>
+                <td class="p-3.5 text-rose-400">0% (Never)</td>
+                <td class="p-3.5 font-mono">188.0 ± 124.3</td>
+                <td class="p-3.5 font-mono">1,431.2 /s</td>
+              </tr>
+              <tr class="hover:bg-gray-800/40">
+                <td class="p-3.5 font-medium text-gray-200">B: NeuroFuzz (Pre-Frontier)</td>
+                <td class="p-3.5 text-blue-400">LinearBandit</td>
+                <td class="p-3.5 text-rose-400 font-semibold">OFF</td>
+                <td class="p-3.5 font-mono">64.8 ± 2.05</td>
+                <td class="p-3.5 text-rose-400 font-bold">15.2 ± 0.84</td>
+                <td class="p-3.5 text-rose-400">0% (Never)</td>
+                <td class="p-3.5 font-mono">217.2 ± 225.5</td>
+                <td class="p-3.5 font-mono">700.1 /s</td>
+              </tr>
+              <tr class="hover:bg-gray-800/40">
+                <td class="p-3.5 font-medium text-gray-200">D: NeuroFuzz Full (Adaptive)</td>
+                <td class="p-3.5 text-blue-400">LinearBandit</td>
+                <td class="p-3.5 text-emerald-400 font-semibold">Adaptive ON</td>
+                <td class="p-3.5 font-mono">72.4 ± 3.36</td>
+                <td class="p-3.5 text-emerald-400 font-bold">19.0 ± 0.00</td>
+                <td class="p-3.5 text-emerald-400 font-semibold">100% (261 iters)</td>
+                <td class="p-3.5 font-mono">130.4 ± 83.9</td>
+                <td class="p-3.5 font-mono text-amber-400">575.6 /s</td>
+              </tr>
+              <tr class="hover:bg-gray-800/40">
+                <td class="p-3.5 font-medium text-gray-200">E: Random + Frontier</td>
+                <td class="p-3.5 text-gray-400">Random</td>
+                <td class="p-3.5 text-emerald-400 font-semibold">Fixed ON</td>
+                <td class="p-3.5 font-mono">72.0 ± 0.00</td>
+                <td class="p-3.5 text-emerald-400 font-bold">19.0 ± 0.00</td>
+                <td class="p-3.5 text-emerald-400 font-semibold">100% (261 iters)</td>
+                <td class="p-3.5 font-mono text-cyan-400 font-bold">291.8 ± 84.6</td>
+                <td class="p-3.5 font-mono">967.9 /s</td>
+              </tr>
+              <tr class="bg-blue-950/20 border-l-4 border-blue-500 hover:bg-blue-900/30">
+                <td class="p-3.5 font-semibold text-white flex items-center gap-2">
+                  <span>F: Recommended Production</span>
+                  <span class="badge bg-emerald-500/20 text-emerald-300">Optimal</span>
+                </td>
+                <td class="p-3.5 text-emerald-400 font-medium">Random</td>
+                <td class="p-3.5 text-emerald-400 font-semibold">Adaptive ON</td>
+                <td class="p-3.5 font-mono font-bold text-emerald-400">72.6 ± 1.52</td>
+                <td class="p-3.5 text-emerald-400 font-bold">19.0 ± 0.00</td>
+                <td class="p-3.5 text-emerald-400 font-semibold">100% (261 iters)</td>
+                <td class="p-3.5 font-mono">189.8 ± 109.0</td>
+                <td class="p-3.5 font-mono font-bold text-emerald-400">876.2 /s</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- The Negative ML Result Box -->
+      <div class="bg-[var(--card)] border border-amber-900/40 rounded-xl p-5 border-l-4 border-amber-500">
+        <div class="flex items-start gap-3">
+          <div class="text-amber-400 text-lg">⚠️</div>
+          <div>
+            <h4 class="text-sm font-semibold text-white">Key Research Insight: The Disproof of the Seed-Learning Hypothesis</h4>
+            <p class="text-xs text-gray-300 mt-1 leading-relaxed">
+              We initially hypothesized that an online linear contextual bandit would steer seed scheduling toward high-yield inputs. In our Phase 8 ablation (<span class="font-mono text-xs text-amber-300">Config D vs F</span>), we found that once <strong class="text-white">StateFrontier</strong> was active, the bandit yielded <span class="font-mono text-xs">ΔCoverage = -0.20 ± 4.02</span> (statistically indistinguishable from random) while imposing a <strong class="text-amber-300">34.3% execution throughput penalty</strong> (-300.6 exec/s) due to feature extraction and ridge regression updates. Guided by empirical data, we removed the linear bandit from the default production pipeline.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: ABLATION MATRIX -->
+    <section id="content-ablation" class="space-y-6 hidden">
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-5">
+        <h3 class="text-base font-semibold text-white">Full 11-Configuration Ablation Matrix</h3>
+        <p class="text-xs text-[var(--muted-foreground)] mt-1">Paired differences computed against Parent Configuration D across deterministic seeds 101, 202, 303, 404, 505</p>
+
+        <!-- Ablation Contribution Bars -->
+        <div class="mt-6 space-y-3">
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-white font-medium">StateFrontier (E vs A on Random)</span>
+              <span class="text-emerald-400 font-bold">+10.20 Cov / +4.20 Depth (100% Consistent)</span>
+            </div>
+            <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
+              <div class="bg-emerald-500 h-3 rounded-full" style="width: 100%"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-white font-medium">StateFrontier in Full System (D vs B)</span>
+              <span class="text-emerald-400 font-bold">+7.60 Cov / +3.80 Depth</span>
+            </div>
+            <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
+              <div class="bg-emerald-500 h-3 rounded-full" style="width: 74%"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-white font-medium">Structured Field Splicing (D vs I)</span>
+              <span class="text-blue-400 font-bold">+2.40 Cov (+29.7k AUC)</span>
+            </div>
+            <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
+              <div class="bg-blue-500 h-3 rounded-full" style="width: 24%"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-white font-medium">Contextual Mutation Policy (D vs G)</span>
+              <span class="text-purple-400 font-bold">+1.40 Cov (Positive on 4/5 seeds)</span>
+            </div>
+            <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
+              <div class="bg-purple-500 h-3 rounded-full" style="width: 14%"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-white font-medium">Compatible Donor Selection (D vs H)</span>
+              <span class="text-indigo-400 font-bold">+1.20 Cov (Positive on 4/5 seeds)</span>
+            </div>
+            <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
+              <div class="bg-indigo-500 h-3 rounded-full" style="width: 12%"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-white font-medium">Adaptive Frontier Allocation (D vs J)</span>
+              <span class="text-amber-400 font-bold">+0.40 Cov (+22.8 exec/s, saves 4,480 attempts)</span>
+            </div>
+            <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
+              <div class="bg-amber-500 h-3 rounded-full" style="width: 4%"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-white font-medium">Automatic Delimiter Discovery (D vs K)</span>
+              <span class="text-cyan-400 font-bold">0.00 Cov (100% Exact Parity with Static)</span>
+            </div>
+            <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
+              <div class="bg-cyan-500 h-3 rounded-full" style="width: 1%"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-white font-medium">ML Seed Scheduler (D vs F)</span>
+              <span class="text-rose-400 font-bold">-0.20 Cov / -300.6 exec/s penalty</span>
+            </div>
+            <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
+              <div class="bg-rose-500 h-3 rounded-full" style="width: 2%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: SEQUENTIAL STATE MACHINE -->
+    <section id="content-statemachine" class="space-y-6 hidden">
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-5">
+        <h3 class="text-base font-semibold text-white">Structured Target State Machine Topology</h3>
+        <p class="text-xs text-[var(--muted-foreground)] mt-1">Illustrating why unguided mutations fail and how StateFrontier synthesizes state chains</p>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-5 gap-3">
+          <div class="bg-[#162032] border border-blue-500/40 rounded-xl p-4 flex flex-col justify-between">
+            <span class="text-[11px] font-bold text-blue-400 uppercase">Stage 1</span>
+            <div class="text-sm font-mono text-white font-semibold my-2">NF01</div>
+            <p class="text-[11px] text-gray-400">Magic header validation. 4 bytes. Any corruption triggers immediate abort.</p>
+            <span class="badge bg-blue-500/20 text-blue-300 mt-2 self-start">Depth 1-3</span>
+          </div>
+
+          <div class="bg-[#162032] border border-blue-500/40 rounded-xl p-4 flex flex-col justify-between">
+            <span class="text-[11px] font-bold text-blue-400 uppercase">Stage 2</span>
+            <div class="text-sm font-mono text-white font-semibold my-2">| &lt;CMD&gt; |</div>
+            <p class="text-[11px] text-gray-400">Delimiter parsing and command dispatch (<span class="font-mono text-xs">ECHO</span>, <span class="font-mono text-xs">CALC</span>, <span class="font-mono text-xs">DIAG</span>, <span class="font-mono text-xs">AUTH</span>).</p>
+            <span class="badge bg-blue-500/20 text-blue-300 mt-2 self-start">Depth 4-6</span>
+          </div>
+
+          <div class="bg-[#162032] border border-indigo-500/40 rounded-xl p-4 flex flex-col justify-between">
+            <span class="text-[11px] font-bold text-indigo-400 uppercase">Stage 3</span>
+            <div class="text-sm font-mono text-white font-semibold my-2">| STEP=1 |</div>
+            <p class="text-[11px] text-gray-400">Initial diagnostic state step. Conventional baseline easily reaches this stage.</p>
+            <span class="badge bg-indigo-500/20 text-indigo-300 mt-2 self-start">Depth 14</span>
+          </div>
+
+          <div class="bg-[#162032] border border-amber-500/60 rounded-xl p-4 flex flex-col justify-between bg-amber-950/10">
+            <span class="text-[11px] font-bold text-amber-400 uppercase">Barrier Zone</span>
+            <div class="text-sm font-mono text-amber-200 font-semibold my-2">| STEP=2 | STEP=3 |</div>
+            <p class="text-[11px] text-gray-300">Sequential validation barrier. Baseline cannot discover STEP=2 via byte mutations.</p>
+            <span class="badge bg-amber-500/20 text-amber-300 mt-2 self-start">Depth 15-16</span>
+          </div>
+
+          <div class="bg-[#162032] border border-emerald-500/60 rounded-xl p-4 flex flex-col justify-between bg-emerald-950/10">
+            <span class="text-[11px] font-bold text-emerald-400 uppercase">Terminal State</span>
+            <div class="text-sm font-mono text-emerald-300 font-semibold my-2">...| STEP=5</div>
+            <p class="text-[11px] text-gray-300">Terminal diagnostic logic reached. Unlocked in 100% of StateFrontier trials.</p>
+            <span class="badge bg-emerald-500/20 text-emerald-300 mt-2 self-start">Depth 19 (Max)</span>
+          </div>
+        </div>
+
+        <div class="mt-6 bg-[#090d16] p-4 rounded-xl border border-[var(--border)] font-mono text-xs">
+          <div class="text-gray-400 mb-1">// Synthesized Winning Input for Depth 19 (Discovered in iteration 350):</div>
+          <div class="text-emerald-400 break-all select-all font-bold">
+            NF01|DIAG|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: INTERACTIVE SIMULATOR -->
+    <section id="content-simulator" class="space-y-6 hidden">
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-5">
+        <div class="flex flex-wrap justify-between items-center gap-4">
+          <div>
+            <h3 class="text-base font-semibold text-white">Interactive Fuzzing Progression Simulation</h3>
+            <p class="text-xs text-[var(--muted-foreground)]">Step through execution to observe live state transitions, coverage growth, and adaptive rate decay</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <button id="simBtn" onclick="toggleSimulation()" class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-4 py-2 rounded-lg transition shadow-sm">
+              ▶ Run Live Simulation
+            </button>
+            <button onclick="resetSimulation()" class="bg-gray-800 hover:bg-gray-700 text-gray-300 text-xs font-medium px-3 py-2 rounded-lg transition border border-gray-700">
+              Reset
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6">
+          <div class="bg-[#162032] p-4 rounded-xl border border-[var(--border)]">
+            <span class="text-xs text-gray-400">Current Iteration</span>
+            <div id="simIter" class="text-2xl font-mono font-bold text-white mt-1">0</div>
+          </div>
+          <div class="bg-[#162032] p-4 rounded-xl border border-[var(--border)]">
+            <span class="text-xs text-gray-400">Coverage Units</span>
+            <div id="simCov" class="text-2xl font-mono font-bold text-blue-400 mt-1">41</div>
+          </div>
+          <div class="bg-[#162032] p-4 rounded-xl border border-[var(--border)]">
+            <span class="text-xs text-gray-400">Protocol Depth</span>
+            <div id="simDepth" class="text-2xl font-mono font-bold text-emerald-400 mt-1">Depth 14</div>
+          </div>
+          <div class="bg-[#162032] p-4 rounded-xl border border-[var(--border)]">
+            <span class="text-xs text-gray-400">Adaptive Frontier Rate</span>
+            <div id="simRate" class="text-2xl font-mono font-bold text-amber-400 mt-1">20.0%</div>
+          </div>
+        </div>
+
+        <div class="mt-4 bg-[#090d16] p-4 rounded-xl border border-[var(--border)] h-48 overflow-y-auto font-mono text-xs text-gray-300" id="simLog">
+          <div class="text-gray-500">[System] Simulator initialized with baseline corpus (15 seeds, 41 coverage units). Ready.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: PUBLICATION FIGURES GALLERY -->
+    <section id="content-plots" class="space-y-6 hidden">
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-5">
+        <h3 class="text-base font-semibold text-white">Phase 8 Publication Figures</h3>
+        <p class="text-xs text-[var(--muted-foreground)] mt-1">13 publication-grade figures generated from the 55-trial empirical trajectory dataset</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+          <div class="bg-[#162032] p-4 rounded-xl border border-[var(--border)]">
+            <span class="text-xs font-semibold text-white">1. Coverage Discovery Velocity</span>
+            <p class="text-[11px] text-gray-400 mt-0.5">Coverage vs. Iterations across 25,000 budget</p>
+            <div class="mt-3 bg-gray-900 rounded p-2 text-center text-xs text-blue-400 font-mono">experiments/results/phase8/plots/coverage_vs_iterations.png</div>
+          </div>
+          <div class="bg-[#162032] p-4 rounded-xl border border-[var(--border)]">
+            <span class="text-xs font-semibold text-white">2. Protocol Depth Progression</span>
+            <p class="text-[11px] text-gray-400 mt-0.5">Depth vs. Iterations (showing instant D19 leap)</p>
+            <div class="mt-3 bg-gray-900 rounded p-2 text-center text-xs text-emerald-400 font-mono">experiments/results/phase8/plots/depth_vs_iterations.png</div>
+          </div>
+          <div class="bg-[#162032] p-4 rounded-xl border border-[var(--border)]">
+            <span class="text-xs font-semibold text-white">3. Component Ablation Contribution</span>
+            <p class="text-[11px] text-gray-400 mt-0.5">Horizontal bar chart showing relative ΔCoverage</p>
+            <div class="mt-3 bg-gray-900 rounded p-2 text-center text-xs text-purple-400 font-mono">experiments/results/phase8/plots/ablation_contribution.png</div>
+          </div>
+          <div class="bg-[#162032] p-4 rounded-xl border border-[var(--border)]">
+            <span class="text-xs font-semibold text-white">4. Throughput & Overhead</span>
+            <p class="text-[11px] text-gray-400 mt-0.5">Exec/s comparing persistent harness and ML tax</p>
+            <div class="mt-3 bg-gray-900 rounded p-2 text-center text-xs text-amber-400 font-mono">experiments/results/phase8/plots/throughput_comparison.png</div>
+          </div>
+          <div class="bg-[#162032] p-4 rounded-xl border border-[var(--border)]">
+            <span class="text-xs font-semibold text-white">5. Crash Discovery Tradeoffs</span>
+            <p class="text-[11px] text-gray-400 mt-0.5">Comparing unique crashes across guided vs. random</p>
+            <div class="mt-3 bg-gray-900 rounded p-2 text-center text-xs text-rose-400 font-mono">experiments/results/phase8/plots/crash_comparison.png</div>
+          </div>
+          <div class="bg-[#162032] p-4 rounded-xl border border-[var(--border)]">
+            <span class="text-xs font-semibold text-white">6. Time-to-Depth Transition (T15-T19)</span>
+            <p class="text-[11px] text-gray-400 mt-0.5">Iteration reach thresholds for sequential steps</p>
+            <div class="mt-3 bg-gray-900 rounded p-2 text-center text-xs text-cyan-400 font-mono">experiments/results/phase8/plots/time_to_depth.png</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(b => {
+        b.classList.remove('border-blue-500', 'text-blue-400');
+        b.classList.add('border-transparent', 'text-gray-400');
+      });
+      document.getElementById('tab-' + tabId).classList.add('border-blue-500', 'text-blue-400');
+      document.getElementById('tab-' + tabId).classList.remove('border-transparent', 'text-gray-400');
+
+      ['overview', 'ablation', 'statemachine', 'simulator', 'plots'].forEach(t => {
+        const el = document.getElementById('content-' + t);
+        if (t === tabId) {
+          el.classList.remove('hidden');
+        } else {
+          el.classList.add('hidden');
+        }
+      });
+    }
+
+    // Simulator Logic
+    let simInterval = null;
+    let simIter = 0;
+    let simCov = 41;
+    let simDepth = 14;
+    let simRate = 0.20;
+
+    function toggleSimulation() {
+      const btn = document.getElementById('simBtn');
+      if (simInterval) {
+        clearInterval(simInterval);
+        simInterval = null;
+        btn.innerText = '▶ Resume Simulation';
+      } else {
+        btn.innerText = '⏸ Pause Simulation';
+        simInterval = setInterval(simStep, 100);
+      }
+    }
+
+    function simStep() {
+      simIter += 10;
+      const log = document.getElementById('simLog');
+
+      if (simIter === 80) {
+        simDepth = 15;
+        simCov += 4;
+        log.innerHTML += '<div class="text-emerald-400 font-semibold">[Iter 86] [*] DEPTH ADVANCEMENT: Depth 14 -> Depth 15! [state_frontier_extend] Found STEP=2!</div>';
+      } else if (simIter === 170) {
+        simDepth = 16;
+        simCov += 6;
+        log.innerHTML += '<div class="text-emerald-400 font-semibold">[Iter 173] [*] DEPTH ADVANCEMENT: Depth 15 -> Depth 16! [state_frontier_extend] Found STEP=3!</div>';
+      } else if (simIter === 260) {
+        simDepth = 17;
+        simCov += 8;
+        log.innerHTML += '<div class="text-emerald-400 font-semibold">[Iter 261] [*] DEPTH ADVANCEMENT: Depth 16 -> Depth 17! [state_frontier_extend] Found STEP=4!</div>';
+      } else if (simIter === 350) {
+        simDepth = 19;
+        simCov = 72;
+        log.innerHTML += '<div class="text-purple-400 font-bold">[Iter 350] [★] TERMINAL STATE REACHED: Depth 19 unlocked! (All 5 sequential stages passed).</div>';
+      } else if (simIter > 400 && simRate > 0.02) {
+        simRate = Math.max(0.02, simRate * 0.90);
+        log.innerHTML += '<div class="text-amber-400/80 text-[11px]">[Iter ' + simIter + '] [AdaptiveController] Rate decaying due to depth saturation: ' + (simRate * 100).toFixed(1) + '%</div>';
+      }
+
+      if (simIter >= 1000) {
+        clearInterval(simInterval);
+        simInterval = null;
+        document.getElementById('simBtn').innerText = '✔ Simulation Complete';
+        log.innerHTML += '<div class="text-cyan-400 font-bold">[Complete] Fuzzing budget exhausted. Max depth 19 preserved. Saved 4,480 redundant candidate evaluations.</div>';
+      }
+
+      document.getElementById('simIter').innerText = simIter;
+      document.getElementById('simCov').innerText = simCov;
+      document.getElementById('simDepth').innerText = 'Depth ' + simDepth;
+      document.getElementById('simRate').innerText = (simRate * 100).toFixed(1) + '%';
+      log.scrollTop = log.scrollHeight;
+    }
+
+    function resetSimulation() {
+      if (simInterval) clearInterval(simInterval);
+      simInterval = null;
+      simIter = 0;
+      simCov = 41;
+      simDepth = 14;
+      simRate = 0.20;
+      document.getElementById('simBtn').innerText = '▶ Run Live Simulation';
+      document.getElementById('simIter').innerText = '0';
+      document.getElementById('simCov').innerText = '41';
+      document.getElementById('simDepth').innerText = 'Depth 14';
+      document.getElementById('simRate').innerText = '20.0%';
+      document.getElementById('simLog').innerHTML = '<div class="text-gray-500">[System] Simulator reset to initial corpus baseline.</div>';
+    }
+  </script>
+</body>
+</html>
