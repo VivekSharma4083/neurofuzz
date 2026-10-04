@@ -1,0 +1,398 @@
+[
+  {
+    "config": "A_random_fixed",
+    "seed": 101,
+    "iteration": 2074,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "A_random_fixed",
+    "seed": 101,
+    "iteration": 14339,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "input_iter002074_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "A_random_fixed",
+    "seed": 404,
+    "iteration": 835,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "A_random_fixed",
+    "seed": 404,
+    "iteration": 6545,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "input_iter000835_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "A_random_fixed",
+    "seed": 505,
+    "iteration": 15967,
+    "depth": 15,
+    "transition": "0->15",
+    "previous_max_depth": 14,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "input_iter005460_cov1_af1d043d",
+    "parent_payload": "NF01|DIAG|NEST=L1|NEST=L3|NEST=L2|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|NEST=L3|NEST=L2|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "B_heuristic_fixed",
+    "seed": 101,
+    "iteration": 1374,
+    "depth": 15,
+    "transition": "0->15",
+    "previous_max_depth": 14,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "input_iter001365_cov1_0c166eb7",
+    "parent_payload": "NF01|DIAG||NEST=L5|STEP=1\n",
+    "mutated_payload": "NF01|DIAG||NEST=L5|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "B_heuristic_fixed",
+    "seed": 202,
+    "iteration": 11877,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "B_heuristic_fixed",
+    "seed": 404,
+    "iteration": 2988,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "C_linear_bandit_fixed",
+    "seed": 404,
+    "iteration": 646,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "C_linear_bandit_fixed",
+    "seed": 505,
+    "iteration": 3411,
+    "depth": 15,
+    "transition": "10->15",
+    "previous_max_depth": 14,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "input_iter000245_cov2_70455996",
+    "parent_payload": "NF01|DIAG|NEST=L1|NEST=L4|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|NEST=L4|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "C_linear_bandit_fixed",
+    "seed": 505,
+    "iteration": 17923,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "input_iter003411_cov2_e3fbf616",
+    "parent_payload": "NF01|DIAG|NEST=L1|NEST=L4|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|NEST=L4|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "D_random_ucb1",
+    "seed": 101,
+    "iteration": 1741,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "D_random_ucb1",
+    "seed": 202,
+    "iteration": 724,
+    "depth": 15,
+    "transition": "8->15",
+    "previous_max_depth": 14,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "input_iter000077_cov2_ae7ccd58",
+    "parent_payload": "NF01|DIAG|NEST=L2|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L2|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "D_random_ucb1",
+    "seed": 303,
+    "iteration": 8558,
+    "depth": 15,
+    "transition": "0->15",
+    "previous_max_depth": 14,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "input_iter000811_cov1_1618d262",
+    "parent_payload": "NF01|DIAG|NEST=L5|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L5|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "E_random_contextual",
+    "seed": 202,
+    "iteration": 21814,
+    "depth": 15,
+    "transition": "0->15",
+    "previous_max_depth": 14,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "input_iter009643_cov1_ae7ccd58",
+    "parent_payload": "NF01|DIAG|NEST=L2|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L2|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "E_random_contextual",
+    "seed": 303,
+    "iteration": 20109,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "E_random_contextual",
+    "seed": 505,
+    "iteration": 5507,
+    "depth": 15,
+    "transition": "0->15",
+    "previous_max_depth": 14,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "input_iter002800_cov1_032314f6",
+    "parent_payload": "NF01|DIAG|NEST=L5|STEP=1|NEST=L2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L5|STEP=1|STEP=2|NEST=L2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "F_random_contextual_compatible",
+    "seed": 101,
+    "iteration": 11034,
+    "depth": 15,
+    "transition": "8->15",
+    "previous_max_depth": 14,
+    "operator": "dictionary_replace",
+    "parent_name": "input_iter000602_cov2_9a19ac68",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|NEST=L2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1||STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "F_random_contextual_compatible",
+    "seed": 404,
+    "iteration": 3084,
+    "depth": 15,
+    "transition": "12->15",
+    "previous_max_depth": 14,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "input_iter001169_cov3_f8379b82",
+    "parent_payload": "NF01|DIAG|NEST=L1|NEST=L3|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|NEST=L3|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "G_neurofuzz_full",
+    "seed": 202,
+    "iteration": 577,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "G_neurofuzz_full",
+    "seed": 404,
+    "iteration": 1754,
+    "depth": 15,
+    "transition": "8->15",
+    "previous_max_depth": 14,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "input_iter000670_cov2_022f3a6d",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|NEST=L2|NEST=L4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|NEST=L2|STEP=2|NEST=L4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "G_neurofuzz_full",
+    "seed": 404,
+    "iteration": 4620,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "dictionary_insert_boundary",
+    "parent_name": "input_iter001754_cov2_7a3a43e9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|NEST=L2|STEP=2|NEST=L4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|NEST=L2|STEP=2|NEST=L4\n|STEP=3",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  }
+]

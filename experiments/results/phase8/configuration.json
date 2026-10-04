@@ -1,0 +1,197 @@
+{
+  "phase": "8",
+  "iterations": 25000,
+  "seeds": [
+    101,
+    202,
+    303,
+    404,
+    505
+  ],
+  "executor_type": "persistent",
+  "configurations": {
+    "A_random_baseline": {
+      "label": "A: Random Baseline (No Frontier)",
+      "scheduler_type": "random",
+      "mutation_policy": "fixed",
+      "donor_policy": "random",
+      "enable_splicing": false,
+      "enable_frontier_extension": false,
+      "frontier_extension_rate": 0.0,
+      "frontier_rate_mode": "fixed",
+      "min_frontier_rate": 0.02,
+      "max_frontier_rate": 0.3,
+      "delimiter": "|",
+      "delimiter_mode": "static",
+      "reusable_source": [
+        "phase7c",
+        "A_random_fixed"
+      ]
+    },
+    "B_neurofuzz_no_frontier": {
+      "label": "B: NeuroFuzz No Frontier (Pre-Frontier Full)",
+      "scheduler_type": "linear_bandit",
+      "mutation_policy": "contextual",
+      "donor_policy": "compatible",
+      "enable_splicing": true,
+      "enable_frontier_extension": false,
+      "frontier_extension_rate": 0.0,
+      "frontier_rate_mode": "fixed",
+      "min_frontier_rate": 0.02,
+      "max_frontier_rate": 0.3,
+      "delimiter": "|",
+      "delimiter_mode": "static",
+      "reusable_source": [
+        "phase7c",
+        "B_neurofuzz_full"
+      ]
+    },
+    "C_neurofuzz_full_fixed": {
+      "label": "C: NeuroFuzz Full (Fixed Frontier 0.20)",
+      "scheduler_type": "linear_bandit",
+      "mutation_policy": "contextual",
+      "donor_policy": "compatible",
+      "enable_splicing": true,
+      "enable_frontier_extension": true,
+      "frontier_extension_rate": 0.2,
+      "frontier_rate_mode": "fixed",
+      "min_frontier_rate": 0.02,
+      "max_frontier_rate": 0.3,
+      "delimiter": "|",
+      "delimiter_mode": "static",
+      "reusable_source": [
+        "phase7d",
+        "A_baseline_p7c"
+      ]
+    },
+    "D_neurofuzz_full_adaptive": {
+      "label": "D: NeuroFuzz Full Adaptive (Parent Full System)",
+      "scheduler_type": "linear_bandit",
+      "mutation_policy": "contextual",
+      "donor_policy": "compatible",
+      "enable_splicing": true,
+      "enable_frontier_extension": true,
+      "frontier_extension_rate": 0.2,
+      "frontier_rate_mode": "adaptive",
+      "min_frontier_rate": 0.02,
+      "max_frontier_rate": 0.3,
+      "delimiter": "|",
+      "delimiter_mode": "static",
+      "reusable_source": [
+        "phase7d",
+        "B_adaptive_frontier"
+      ]
+    },
+    "E_random_frontier": {
+      "label": "E: Random Frontier (Random Sched/Mut + Frontier ON)",
+      "scheduler_type": "random",
+      "mutation_policy": "fixed",
+      "donor_policy": "random",
+      "enable_splicing": true,
+      "enable_frontier_extension": true,
+      "frontier_extension_rate": 0.2,
+      "frontier_rate_mode": "fixed",
+      "min_frontier_rate": 0.02,
+      "max_frontier_rate": 0.3,
+      "delimiter": "|",
+      "delimiter_mode": "static",
+      "reusable_source": null
+    },
+    "F_no_seed_learning": {
+      "label": "F: Ablate Seed Learning (Random Sched + Full)",
+      "scheduler_type": "random",
+      "mutation_policy": "contextual",
+      "donor_policy": "compatible",
+      "enable_splicing": true,
+      "enable_frontier_extension": true,
+      "frontier_extension_rate": 0.2,
+      "frontier_rate_mode": "adaptive",
+      "min_frontier_rate": 0.02,
+      "max_frontier_rate": 0.3,
+      "delimiter": "|",
+      "delimiter_mode": "static",
+      "reusable_source": null
+    },
+    "G_no_contextual_mutation": {
+      "label": "G: Ablate Contextual Mutation (Fixed Mut + Full)",
+      "scheduler_type": "linear_bandit",
+      "mutation_policy": "fixed",
+      "donor_policy": "compatible",
+      "enable_splicing": true,
+      "enable_frontier_extension": true,
+      "frontier_extension_rate": 0.2,
+      "frontier_rate_mode": "adaptive",
+      "min_frontier_rate": 0.02,
+      "max_frontier_rate": 0.3,
+      "delimiter": "|",
+      "delimiter_mode": "static",
+      "reusable_source": null
+    },
+    "H_no_compatible_donor": {
+      "label": "H: Ablate Compatible Donor (Random Donor + Full)",
+      "scheduler_type": "linear_bandit",
+      "mutation_policy": "contextual",
+      "donor_policy": "random",
+      "enable_splicing": true,
+      "enable_frontier_extension": true,
+      "frontier_extension_rate": 0.2,
+      "frontier_rate_mode": "adaptive",
+      "min_frontier_rate": 0.02,
+      "max_frontier_rate": 0.3,
+      "delimiter": "|",
+      "delimiter_mode": "static",
+      "reusable_source": null
+    },
+    "I_no_field_splicing": {
+      "label": "I: Ablate Field Splicing (Splicing OFF + Full)",
+      "scheduler_type": "linear_bandit",
+      "mutation_policy": "contextual",
+      "donor_policy": "compatible",
+      "enable_splicing": false,
+      "enable_frontier_extension": true,
+      "frontier_extension_rate": 0.2,
+      "frontier_rate_mode": "adaptive",
+      "min_frontier_rate": 0.02,
+      "max_frontier_rate": 0.3,
+      "delimiter": "|",
+      "delimiter_mode": "static",
+      "reusable_source": null
+    },
+    "J_no_adaptive_frontier": {
+      "label": "J: Ablate Adaptive Frontier (Fixed Frontier Rate 0.20)",
+      "scheduler_type": "linear_bandit",
+      "mutation_policy": "contextual",
+      "donor_policy": "compatible",
+      "enable_splicing": true,
+      "enable_frontier_extension": true,
+      "frontier_extension_rate": 0.2,
+      "frontier_rate_mode": "fixed",
+      "min_frontier_rate": 0.02,
+      "max_frontier_rate": 0.3,
+      "delimiter": "|",
+      "delimiter_mode": "static",
+      "reusable_source": [
+        "phase7d",
+        "A_baseline_p7c"
+      ]
+    },
+    "K_no_auto_delimiter": {
+      "label": "K: Delimiter Generalization (Static vs Auto Delimiter)",
+      "scheduler_type": "linear_bandit",
+      "mutation_policy": "contextual",
+      "donor_policy": "compatible",
+      "enable_splicing": true,
+      "enable_frontier_extension": true,
+      "frontier_extension_rate": 0.2,
+      "frontier_rate_mode": "adaptive",
+      "min_frontier_rate": 0.02,
+      "max_frontier_rate": 0.3,
+      "delimiter": "|",
+      "delimiter_mode": "auto",
+      "reusable_source": [
+        "phase7d",
+        "D_full_phase7d"
+      ]
+    }
+  }
+}

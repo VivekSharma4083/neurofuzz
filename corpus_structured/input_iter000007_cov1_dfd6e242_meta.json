@@ -1,0 +1,11 @@
+{
+  "iteration": 7,
+  "timestamp": "2026-10-04T08:55:38.038546+00:00",
+  "new_coverage_count": 1,
+  "new_coverage_units": [
+    "PATH_HDR_PARTIAL"
+  ],
+  "sha256": "dfd6e2420ca1cfceef1136f5945a25de3c71c9931a5422d0d88bd13ec9cd6229",
+  "size_bytes": 18,
+  "source": "coverage_guided_mutation"
+}

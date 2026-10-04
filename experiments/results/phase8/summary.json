@@ -1,0 +1,483 @@
+{
+  "phase": "8",
+  "date": "2026-10-04 21:35:47",
+  "total_executions": 1375000,
+  "total_trials": 55,
+  "iterations_per_trial": 25000,
+  "executor_type": "persistent",
+  "configurations": {
+    "A_random_baseline": {
+      "label": "A: Random Baseline (No Frontier)",
+      "trials": 5,
+      "mean_coverage": 61.8,
+      "std_coverage": 1.3,
+      "mean_max_depth": 14.8,
+      "std_max_depth": 1.1,
+      "mean_coverage_auc": 1483436.0,
+      "std_coverage_auc": 22752.8,
+      "mean_depth_auc": 364072.2,
+      "std_depth_auc": 19302.0,
+      "mean_unique_crashes": 188.0,
+      "std_unique_crashes": 124.25,
+      "mean_throughput": 1431.2,
+      "std_throughput": 238.9,
+      "transitions": {
+        "reach_depth_15": {
+          "count": 2,
+          "rate": 0.4,
+          "mean_iterations": 1456.5
+        },
+        "reach_depth_16": {
+          "count": 2,
+          "rate": 0.4,
+          "mean_iterations": 13364.0
+        },
+        "reach_depth_17": {
+          "count": 0,
+          "rate": 0.0,
+          "mean_iterations": null
+        },
+        "reach_depth_18": {
+          "count": 0,
+          "rate": 0.0,
+          "mean_iterations": null
+        },
+        "reach_depth_19": {
+          "count": 0,
+          "rate": 0.0,
+          "mean_iterations": null
+        }
+      }
+    },
+    "B_neurofuzz_no_frontier": {
+      "label": "B: NeuroFuzz No Frontier (Pre-Frontier Full)",
+      "trials": 5,
+      "mean_coverage": 64.8,
+      "std_coverage": 2.05,
+      "mean_max_depth": 15.2,
+      "std_max_depth": 0.84,
+      "mean_coverage_auc": 1551781.7,
+      "std_coverage_auc": 36497.5,
+      "mean_depth_auc": 374205.8,
+      "std_depth_auc": 18162.2,
+      "mean_unique_crashes": 217.2,
+      "std_unique_crashes": 225.53,
+      "mean_throughput": 700.1,
+      "std_throughput": 168.5,
+      "transitions": {
+        "reach_depth_15": {
+          "count": 4,
+          "rate": 0.8,
+          "mean_iterations": 4450.8
+        },
+        "reach_depth_16": {
+          "count": 2,
+          "rate": 0.4,
+          "mean_iterations": 5585.5
+        },
+        "reach_depth_17": {
+          "count": 0,
+          "rate": 0.0,
+          "mean_iterations": null
+        },
+        "reach_depth_18": {
+          "count": 0,
+          "rate": 0.0,
+          "mean_iterations": null
+        },
+        "reach_depth_19": {
+          "count": 0,
+          "rate": 0.0,
+          "mean_iterations": null
+        }
+      }
+    },
+    "C_neurofuzz_full_fixed": {
+      "label": "C: NeuroFuzz Full (Fixed Frontier 0.20)",
+      "trials": 5,
+      "mean_coverage": 72.0,
+      "std_coverage": 1.58,
+      "mean_max_depth": 19.0,
+      "std_max_depth": 0.0,
+      "mean_coverage_auc": 1699615.3,
+      "std_coverage_auc": 35559.2,
+      "mean_depth_auc": 473782.5,
+      "std_depth_auc": 0.0,
+      "mean_unique_crashes": 134.4,
+      "std_unique_crashes": 128.84,
+      "mean_throughput": 552.8,
+      "std_throughput": 106.2,
+      "transitions": {
+        "reach_depth_15": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 86.0
+        },
+        "reach_depth_16": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 173.0
+        },
+        "reach_depth_17": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 261.0
+        },
+        "reach_depth_18": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0
+        },
+        "reach_depth_19": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0
+        }
+      }
+    },
+    "D_neurofuzz_full_adaptive": {
+      "label": "D: NeuroFuzz Full Adaptive (Parent Full System)",
+      "trials": 5,
+      "mean_coverage": 72.4,
+      "std_coverage": 3.36,
+      "mean_max_depth": 19.0,
+      "std_max_depth": 0.0,
+      "mean_coverage_auc": 1705683.1,
+      "std_coverage_auc": 68347.4,
+      "mean_depth_auc": 473782.5,
+      "std_depth_auc": 0.0,
+      "mean_unique_crashes": 130.4,
+      "std_unique_crashes": 83.93,
+      "mean_throughput": 575.6,
+      "std_throughput": 36.2,
+      "transitions": {
+        "reach_depth_15": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 86.0
+        },
+        "reach_depth_16": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 173.0
+        },
+        "reach_depth_17": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 261.0
+        },
+        "reach_depth_18": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0
+        },
+        "reach_depth_19": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0
+        }
+      }
+    },
+    "E_random_frontier": {
+      "label": "E: Random Frontier (Random Sched/Mut + Frontier ON)",
+      "trials": 5,
+      "mean_coverage": 72.0,
+      "std_coverage": 0.0,
+      "mean_max_depth": 19.0,
+      "std_max_depth": 0.0,
+      "mean_coverage_auc": 1720711.1,
+      "std_coverage_auc": 31574.6,
+      "mean_depth_auc": 473782.5,
+      "std_depth_auc": 0.0,
+      "mean_unique_crashes": 291.8,
+      "std_unique_crashes": 84.62,
+      "mean_throughput": 967.9,
+      "std_throughput": 74.5,
+      "transitions": {
+        "reach_depth_15": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 86.0
+        },
+        "reach_depth_16": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 173.0
+        },
+        "reach_depth_17": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 261.0
+        },
+        "reach_depth_18": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0
+        },
+        "reach_depth_19": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0
+        }
+      }
+    },
+    "F_no_seed_learning": {
+      "label": "F: Ablate Seed Learning (Random Sched + Full)",
+      "trials": 5,
+      "mean_coverage": 72.6,
+      "std_coverage": 1.52,
+      "mean_max_depth": 19.0,
+      "std_max_depth": 0.0,
+      "mean_coverage_auc": 1758403.4,
+      "std_coverage_auc": 34398.3,
+      "mean_depth_auc": 473782.5,
+      "std_depth_auc": 0.0,
+      "mean_unique_crashes": 189.8,
+      "std_unique_crashes": 108.96,
+      "mean_throughput": 876.2,
+      "std_throughput": 67.7,
+      "transitions": {
+        "reach_depth_15": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 86.0
+        },
+        "reach_depth_16": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 173.0
+        },
+        "reach_depth_17": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 261.0
+        },
+        "reach_depth_18": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0
+        },
+        "reach_depth_19": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0
+        }
+      }
+    },
+    "G_no_contextual_mutation": {
+      "label": "G: Ablate Contextual Mutation (Fixed Mut + Full)",
+      "trials": 5,
+      "mean_coverage": 71.0,
+      "std_coverage": 1.73,
+      "mean_max_depth": 19.0,
+      "std_max_depth": 0.0,
+      "mean_coverage_auc": 1702538.8,
+      "std_coverage_auc": 41942.6,
+      "mean_depth_auc": 473782.5,
+      "std_depth_auc": 0.0,
+      "mean_unique_crashes": 262.0,
+      "std_unique_crashes": 171.8,
+      "mean_throughput": 576.7,
+      "std_throughput": 56.3,
+      "transitions": {
+        "reach_depth_15": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 86.0
+        },
+        "reach_depth_16": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 173.0
+        },
+        "reach_depth_17": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 261.0
+        },
+        "reach_depth_18": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0
+        },
+        "reach_depth_19": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0
+        }
+      }
+    },
+    "H_no_compatible_donor": {
+      "label": "H: Ablate Compatible Donor (Random Donor + Full)",
+      "trials": 5,
+      "mean_coverage": 71.2,
+      "std_coverage": 2.95,
+      "mean_max_depth": 19.0,
+      "std_max_depth": 0.0,
+      "mean_coverage_auc": 1701360.7,
+      "std_coverage_auc": 52165.2,
+      "mean_depth_auc": 473782.5,
+      "std_depth_auc": 0.0,
+      "mean_unique_crashes": 134.0,
+      "std_unique_crashes": 161.32,
+      "mean_throughput": 653.0,
+      "std_throughput": 49.4,
+      "transitions": {
+        "reach_depth_15": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 86.0
+        },
+        "reach_depth_16": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 173.0
+        },
+        "reach_depth_17": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 261.0
+        },
+        "reach_depth_18": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0
+        },
+        "reach_depth_19": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0
+        }
+      }
+    },
+    "I_no_field_splicing": {
+      "label": "I: Ablate Field Splicing (Splicing OFF + Full)",
+      "trials": 5,
+      "mean_coverage": 70.0,
+      "std_coverage": 3.94,
+      "mean_max_depth": 19.0,
+      "std_max_depth": 0.0,
+      "mean_coverage_auc": 1675979.3,
+      "std_coverage_auc": 74524.0,
+      "mean_depth_auc": 473782.5,
+      "std_depth_auc": 0.0,
+      "mean_unique_crashes": 175.6,
+      "std_unique_crashes": 125.67,
+      "mean_throughput": 846.2,
+      "std_throughput": 91.3,
+      "transitions": {
+        "reach_depth_15": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 86.0
+        },
+        "reach_depth_16": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 173.0
+        },
+        "reach_depth_17": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 261.0
+        },
+        "reach_depth_18": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0
+        },
+        "reach_depth_19": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0
+        }
+      }
+    },
+    "J_no_adaptive_frontier": {
+      "label": "J: Ablate Adaptive Frontier (Fixed Frontier Rate 0.20)",
+      "trials": 5,
+      "mean_coverage": 72.0,
+      "std_coverage": 1.58,
+      "mean_max_depth": 19.0,
+      "std_max_depth": 0.0,
+      "mean_coverage_auc": 1699615.3,
+      "std_coverage_auc": 35559.2,
+      "mean_depth_auc": 473782.5,
+      "std_depth_auc": 0.0,
+      "mean_unique_crashes": 134.4,
+      "std_unique_crashes": 128.84,
+      "mean_throughput": 552.8,
+      "std_throughput": 106.2,
+      "transitions": {
+        "reach_depth_15": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 86.0
+        },
+        "reach_depth_16": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 173.0
+        },
+        "reach_depth_17": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 261.0
+        },
+        "reach_depth_18": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0
+        },
+        "reach_depth_19": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0
+        }
+      }
+    },
+    "K_no_auto_delimiter": {
+      "label": "K: Delimiter Generalization (Static vs Auto Delimiter)",
+      "trials": 5,
+      "mean_coverage": 72.4,
+      "std_coverage": 3.36,
+      "mean_max_depth": 19.0,
+      "std_max_depth": 0.0,
+      "mean_coverage_auc": 1705683.1,
+      "std_coverage_auc": 68347.4,
+      "mean_depth_auc": 473782.5,
+      "std_depth_auc": 0.0,
+      "mean_unique_crashes": 130.4,
+      "std_unique_crashes": 83.93,
+      "mean_throughput": 612.4,
+      "std_throughput": 53.0,
+      "transitions": {
+        "reach_depth_15": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 86.0
+        },
+        "reach_depth_16": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 173.0
+        },
+        "reach_depth_17": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 261.0
+        },
+        "reach_depth_18": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0
+        },
+        "reach_depth_19": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0
+        }
+      }
+    }
+  }
+}

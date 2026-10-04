@@ -1,0 +1,11 @@
+{
+  "iteration": 15,
+  "timestamp": "2026-10-04T08:55:38.650474+00:00",
+  "new_coverage_count": 1,
+  "new_coverage_units": [
+    "PATH_CMD_WRITE"
+  ],
+  "sha256": "051019b0e1638a6a636220121a1824c834329632184cd07cf3096ee414cf89ca",
+  "size_bytes": 27,
+  "source": "coverage_guided_mutation"
+}

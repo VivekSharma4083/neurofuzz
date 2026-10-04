@@ -1,0 +1,1 @@
+NF02|AUTH|USR=admin|TOKEN=adm_init

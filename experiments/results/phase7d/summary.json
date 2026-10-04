@@ -1,0 +1,350 @@
+{
+  "phase": "7D",
+  "date": "2026-10-04 21:08:15",
+  "total_executions": 500000,
+  "total_trials": 20,
+  "iterations_per_trial": 25000,
+  "executor_type": "persistent",
+  "configurations": {
+    "A_baseline_p7c": {
+      "label": "A: Phase 7C Baseline (Fixed 0.20, Static Delim)",
+      "trials": 5,
+      "mean_coverage": 72.0,
+      "std_coverage": 1.58,
+      "mean_max_depth": 19.0,
+      "std_max_depth": 0.0,
+      "mean_coverage_auc": 1699615.3,
+      "std_coverage_auc": 35559.2,
+      "mean_depth_auc": 473782.5,
+      "std_depth_auc": 0.0,
+      "mean_unique_crashes": 134.4,
+      "std_unique_crashes": 128.84,
+      "mean_throughput": 552.8,
+      "std_throughput": 106.2,
+      "mean_final_frontier_rate": 0.2,
+      "transitions": {
+        "reach_depth_15": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 86.0,
+          "times": [
+            86,
+            86,
+            86,
+            86,
+            86
+          ]
+        },
+        "reach_depth_16": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 173.0,
+          "times": [
+            173,
+            173,
+            173,
+            173,
+            173
+          ]
+        },
+        "reach_depth_17": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 261.0,
+          "times": [
+            261,
+            261,
+            261,
+            261,
+            261
+          ]
+        },
+        "reach_depth_18": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0,
+          "times": [
+            350,
+            350,
+            350,
+            350,
+            350
+          ]
+        },
+        "reach_depth_19": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0,
+          "times": [
+            350,
+            350,
+            350,
+            350,
+            350
+          ]
+        }
+      },
+      "delimiter_summary": {
+        "active_delimiters": [
+          "|"
+        ],
+        "mean_confidence": 1.0
+      }
+    },
+    "B_adaptive_frontier": {
+      "label": "B: Adaptive Frontier (Decay [0.02, 0.30], Static Delim)",
+      "trials": 5,
+      "mean_coverage": 72.4,
+      "std_coverage": 3.36,
+      "mean_max_depth": 19.0,
+      "std_max_depth": 0.0,
+      "mean_coverage_auc": 1705683.1,
+      "std_coverage_auc": 68347.4,
+      "mean_depth_auc": 473782.5,
+      "std_depth_auc": 0.0,
+      "mean_unique_crashes": 130.4,
+      "std_unique_crashes": 83.93,
+      "mean_throughput": 575.6,
+      "std_throughput": 36.2,
+      "mean_final_frontier_rate": 0.02,
+      "transitions": {
+        "reach_depth_15": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 86.0,
+          "times": [
+            86,
+            86,
+            86,
+            86,
+            86
+          ]
+        },
+        "reach_depth_16": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 173.0,
+          "times": [
+            173,
+            173,
+            173,
+            173,
+            173
+          ]
+        },
+        "reach_depth_17": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 261.0,
+          "times": [
+            261,
+            261,
+            261,
+            261,
+            261
+          ]
+        },
+        "reach_depth_18": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0,
+          "times": [
+            350,
+            350,
+            350,
+            350,
+            350
+          ]
+        },
+        "reach_depth_19": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0,
+          "times": [
+            350,
+            350,
+            350,
+            350,
+            350
+          ]
+        }
+      },
+      "delimiter_summary": {
+        "active_delimiters": [
+          "|"
+        ],
+        "mean_confidence": 1.0
+      }
+    },
+    "C_auto_delimiter": {
+      "label": "C: Auto Delimiter (Fixed 0.20, Auto Delim)",
+      "trials": 5,
+      "mean_coverage": 72.0,
+      "std_coverage": 1.58,
+      "mean_max_depth": 19.0,
+      "std_max_depth": 0.0,
+      "mean_coverage_auc": 1699615.3,
+      "std_coverage_auc": 35559.2,
+      "mean_depth_auc": 473782.5,
+      "std_depth_auc": 0.0,
+      "mean_unique_crashes": 134.4,
+      "std_unique_crashes": 128.84,
+      "mean_throughput": 562.6,
+      "std_throughput": 73.6,
+      "mean_final_frontier_rate": 0.2,
+      "transitions": {
+        "reach_depth_15": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 86.0,
+          "times": [
+            86,
+            86,
+            86,
+            86,
+            86
+          ]
+        },
+        "reach_depth_16": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 173.0,
+          "times": [
+            173,
+            173,
+            173,
+            173,
+            173
+          ]
+        },
+        "reach_depth_17": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 261.0,
+          "times": [
+            261,
+            261,
+            261,
+            261,
+            261
+          ]
+        },
+        "reach_depth_18": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0,
+          "times": [
+            350,
+            350,
+            350,
+            350,
+            350
+          ]
+        },
+        "reach_depth_19": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0,
+          "times": [
+            350,
+            350,
+            350,
+            350,
+            350
+          ]
+        }
+      },
+      "delimiter_summary": {
+        "active_delimiters": [
+          "|"
+        ],
+        "mean_confidence": 1.0
+      }
+    },
+    "D_full_phase7d": {
+      "label": "D: Full Phase 7D (Adaptive Frontier + Auto Delim)",
+      "trials": 5,
+      "mean_coverage": 72.4,
+      "std_coverage": 3.36,
+      "mean_max_depth": 19.0,
+      "std_max_depth": 0.0,
+      "mean_coverage_auc": 1705683.1,
+      "std_coverage_auc": 68347.4,
+      "mean_depth_auc": 473782.5,
+      "std_depth_auc": 0.0,
+      "mean_unique_crashes": 130.4,
+      "std_unique_crashes": 83.93,
+      "mean_throughput": 612.4,
+      "std_throughput": 53.0,
+      "mean_final_frontier_rate": 0.02,
+      "transitions": {
+        "reach_depth_15": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 86.0,
+          "times": [
+            86,
+            86,
+            86,
+            86,
+            86
+          ]
+        },
+        "reach_depth_16": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 173.0,
+          "times": [
+            173,
+            173,
+            173,
+            173,
+            173
+          ]
+        },
+        "reach_depth_17": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 261.0,
+          "times": [
+            261,
+            261,
+            261,
+            261,
+            261
+          ]
+        },
+        "reach_depth_18": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0,
+          "times": [
+            350,
+            350,
+            350,
+            350,
+            350
+          ]
+        },
+        "reach_depth_19": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0,
+          "times": [
+            350,
+            350,
+            350,
+            350,
+            350
+          ]
+        }
+      },
+      "delimiter_summary": {
+        "active_delimiters": [
+          "|"
+        ],
+        "mean_confidence": 1.0
+      }
+    }
+  }
+}

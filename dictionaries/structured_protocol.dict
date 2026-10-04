@@ -1,0 +1,128 @@
+# NeuroFuzz Structured Protocol Dictionary (Phase 6A)
+# Domain-specific protocol tokens extracted from targets/structured_target.c.
+# Format: One token per line. Comments start with '#'. Whitespace is trimmed.
+
+# -------------------------------------------------------------
+# 1. Header & Version Identifiers
+# -------------------------------------------------------------
+NF
+NF01
+NF02
+NF03
+
+# Protocol Delimiter
+|
+
+# -------------------------------------------------------------
+# 2. Command Identifiers
+# -------------------------------------------------------------
+PING
+INFO
+CALC
+WRITE
+AUTH
+DIAG
+
+# Delimited command forms
+|PING
+|INFO
+|CALC
+|WRITE
+|AUTH
+|DIAG
+
+# -------------------------------------------------------------
+# 3. Authentication & Privilege Tiers
+# -------------------------------------------------------------
+USER=guest
+USER=dev
+USER=admin
+USER=root
+|USER=guest
+|USER=dev
+|USER=admin
+|USER=root
+
+# Authentication Credentials & Challenges
+TOKEN=adm_init
+PASS=admin_pass_2026
+CHALLENGE=rt_auth_99
+|TOKEN=adm_init
+|PASS=admin_pass_2026
+|CHALLENGE=rt_auth_99
+
+# -------------------------------------------------------------
+# 4. Math & Arithmetic Calculator Tokens
+# -------------------------------------------------------------
+OP=ADD
+OP=SUB
+OP=MUL
+OP=DIV
+NUM=10
+NUM=100
+DEN=0
+DEN=2
+|OP=ADD
+|OP=DIV
+|NUM=100
+|DEN=0
+
+# -------------------------------------------------------------
+# 5. Write Payload & Integer Overflow Tokens
+# -------------------------------------------------------------
+LEN=65536
+DATA=A
+|LEN=65536
+|DATA=A
+
+# -------------------------------------------------------------
+# 6. Nested Pipeline Decoder Tokens
+# -------------------------------------------------------------
+NEST=L1
+NEST=L2
+NEST=L3
+NEST=L4
+NEST=L5
+CODE=RAW
+CODE=HEX
+CODE=RLE
+RLE=999999999999
+|NEST=L1
+|NEST=L2
+|NEST=L3
+|NEST=L4
+|NEST=L5
+|CODE=RAW
+|CODE=HEX
+|CODE=RLE
+|RLE=999999999999
+
+# -------------------------------------------------------------
+# 7. Sequential State Machine Sequence Tokens
+# -------------------------------------------------------------
+STEP=1
+STEP=2
+STEP=3
+STEP=4
+STEP=5
+|STEP=1
+|STEP=2
+|STEP=3
+|STEP=4
+|STEP=5
+
+# -------------------------------------------------------------
+# 8. Execution Directives & Bug Triggering Actions
+# -------------------------------------------------------------
+EXEC=MEMDUMP
+EXEC=DEREF_NULL
+EXEC=CRASH
+EXEC=RUN_PIPELINE
+|EXEC=MEMDUMP
+|EXEC=DEREF_NULL
+|EXEC=CRASH
+|EXEC=RUN_PIPELINE
+
+# Diagnostic Flags
+VERBOSE
+|VERBOSE

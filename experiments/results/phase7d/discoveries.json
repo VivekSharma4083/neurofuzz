@@ -1,0 +1,1482 @@
+[
+  {
+    "config": "A_baseline_p7c",
+    "seed": 101,
+    "iteration": 86,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "state_frontier_extend",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "A_baseline_p7c",
+    "seed": 101,
+    "iteration": 173,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000086_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "A_baseline_p7c",
+    "seed": 101,
+    "iteration": 261,
+    "depth": 17,
+    "transition": "16->17",
+    "previous_max_depth": 16,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000173_cov2_4ba221ad",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_17",
+      "PATH_DEEP_STATE_4"
+    ]
+  },
+  {
+    "config": "A_baseline_p7c",
+    "seed": 101,
+    "iteration": 350,
+    "depth": 19,
+    "transition": "17->19",
+    "previous_max_depth": 17,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000261_cov2_ecb26476",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5\n",
+    "donor_payload": null,
+    "coverage_gained": 4,
+    "new_coverage_units": [
+      "DEPTH_18",
+      "DEPTH_19",
+      "PATH_DEEP_STATE_5",
+      "PATH_DEEP_STATE_MAX"
+    ]
+  },
+  {
+    "config": "A_baseline_p7c",
+    "seed": 202,
+    "iteration": 86,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "state_frontier_extend",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "A_baseline_p7c",
+    "seed": 202,
+    "iteration": 173,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000086_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "A_baseline_p7c",
+    "seed": 202,
+    "iteration": 261,
+    "depth": 17,
+    "transition": "16->17",
+    "previous_max_depth": 16,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000173_cov2_4ba221ad",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_17",
+      "PATH_DEEP_STATE_4"
+    ]
+  },
+  {
+    "config": "A_baseline_p7c",
+    "seed": 202,
+    "iteration": 350,
+    "depth": 19,
+    "transition": "17->19",
+    "previous_max_depth": 17,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000261_cov2_ecb26476",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5\n",
+    "donor_payload": null,
+    "coverage_gained": 4,
+    "new_coverage_units": [
+      "DEPTH_18",
+      "DEPTH_19",
+      "PATH_DEEP_STATE_5",
+      "PATH_DEEP_STATE_MAX"
+    ]
+  },
+  {
+    "config": "A_baseline_p7c",
+    "seed": 303,
+    "iteration": 86,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "state_frontier_extend",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "A_baseline_p7c",
+    "seed": 303,
+    "iteration": 173,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000086_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "A_baseline_p7c",
+    "seed": 303,
+    "iteration": 261,
+    "depth": 17,
+    "transition": "16->17",
+    "previous_max_depth": 16,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000173_cov2_4ba221ad",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_17",
+      "PATH_DEEP_STATE_4"
+    ]
+  },
+  {
+    "config": "A_baseline_p7c",
+    "seed": 303,
+    "iteration": 350,
+    "depth": 19,
+    "transition": "17->19",
+    "previous_max_depth": 17,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000261_cov2_ecb26476",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5\n",
+    "donor_payload": null,
+    "coverage_gained": 4,
+    "new_coverage_units": [
+      "DEPTH_18",
+      "DEPTH_19",
+      "PATH_DEEP_STATE_5",
+      "PATH_DEEP_STATE_MAX"
+    ]
+  },
+  {
+    "config": "A_baseline_p7c",
+    "seed": 404,
+    "iteration": 86,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "state_frontier_extend",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "A_baseline_p7c",
+    "seed": 404,
+    "iteration": 173,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000086_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "A_baseline_p7c",
+    "seed": 404,
+    "iteration": 261,
+    "depth": 17,
+    "transition": "16->17",
+    "previous_max_depth": 16,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000173_cov2_4ba221ad",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_17",
+      "PATH_DEEP_STATE_4"
+    ]
+  },
+  {
+    "config": "A_baseline_p7c",
+    "seed": 404,
+    "iteration": 350,
+    "depth": 19,
+    "transition": "17->19",
+    "previous_max_depth": 17,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000261_cov2_ecb26476",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5\n",
+    "donor_payload": null,
+    "coverage_gained": 4,
+    "new_coverage_units": [
+      "DEPTH_18",
+      "DEPTH_19",
+      "PATH_DEEP_STATE_5",
+      "PATH_DEEP_STATE_MAX"
+    ]
+  },
+  {
+    "config": "A_baseline_p7c",
+    "seed": 505,
+    "iteration": 86,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "state_frontier_extend",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "A_baseline_p7c",
+    "seed": 505,
+    "iteration": 173,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000086_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "A_baseline_p7c",
+    "seed": 505,
+    "iteration": 261,
+    "depth": 17,
+    "transition": "16->17",
+    "previous_max_depth": 16,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000173_cov2_4ba221ad",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_17",
+      "PATH_DEEP_STATE_4"
+    ]
+  },
+  {
+    "config": "A_baseline_p7c",
+    "seed": 505,
+    "iteration": 350,
+    "depth": 19,
+    "transition": "17->19",
+    "previous_max_depth": 17,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000261_cov2_ecb26476",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5\n",
+    "donor_payload": null,
+    "coverage_gained": 4,
+    "new_coverage_units": [
+      "DEPTH_18",
+      "DEPTH_19",
+      "PATH_DEEP_STATE_5",
+      "PATH_DEEP_STATE_MAX"
+    ]
+  },
+  {
+    "config": "B_adaptive_frontier",
+    "seed": 101,
+    "iteration": 86,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "state_frontier_extend",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "B_adaptive_frontier",
+    "seed": 101,
+    "iteration": 173,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000086_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "B_adaptive_frontier",
+    "seed": 101,
+    "iteration": 261,
+    "depth": 17,
+    "transition": "16->17",
+    "previous_max_depth": 16,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000173_cov2_4ba221ad",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_17",
+      "PATH_DEEP_STATE_4"
+    ]
+  },
+  {
+    "config": "B_adaptive_frontier",
+    "seed": 101,
+    "iteration": 350,
+    "depth": 19,
+    "transition": "17->19",
+    "previous_max_depth": 17,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000261_cov2_ecb26476",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5\n",
+    "donor_payload": null,
+    "coverage_gained": 4,
+    "new_coverage_units": [
+      "DEPTH_18",
+      "DEPTH_19",
+      "PATH_DEEP_STATE_5",
+      "PATH_DEEP_STATE_MAX"
+    ]
+  },
+  {
+    "config": "B_adaptive_frontier",
+    "seed": 202,
+    "iteration": 86,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "state_frontier_extend",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "B_adaptive_frontier",
+    "seed": 202,
+    "iteration": 173,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000086_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "B_adaptive_frontier",
+    "seed": 202,
+    "iteration": 261,
+    "depth": 17,
+    "transition": "16->17",
+    "previous_max_depth": 16,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000173_cov2_4ba221ad",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_17",
+      "PATH_DEEP_STATE_4"
+    ]
+  },
+  {
+    "config": "B_adaptive_frontier",
+    "seed": 202,
+    "iteration": 350,
+    "depth": 19,
+    "transition": "17->19",
+    "previous_max_depth": 17,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000261_cov2_ecb26476",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5\n",
+    "donor_payload": null,
+    "coverage_gained": 4,
+    "new_coverage_units": [
+      "DEPTH_18",
+      "DEPTH_19",
+      "PATH_DEEP_STATE_5",
+      "PATH_DEEP_STATE_MAX"
+    ]
+  },
+  {
+    "config": "B_adaptive_frontier",
+    "seed": 303,
+    "iteration": 86,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "state_frontier_extend",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "B_adaptive_frontier",
+    "seed": 303,
+    "iteration": 173,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000086_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "B_adaptive_frontier",
+    "seed": 303,
+    "iteration": 261,
+    "depth": 17,
+    "transition": "16->17",
+    "previous_max_depth": 16,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000173_cov2_4ba221ad",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_17",
+      "PATH_DEEP_STATE_4"
+    ]
+  },
+  {
+    "config": "B_adaptive_frontier",
+    "seed": 303,
+    "iteration": 350,
+    "depth": 19,
+    "transition": "17->19",
+    "previous_max_depth": 17,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000261_cov2_ecb26476",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5\n",
+    "donor_payload": null,
+    "coverage_gained": 4,
+    "new_coverage_units": [
+      "DEPTH_18",
+      "DEPTH_19",
+      "PATH_DEEP_STATE_5",
+      "PATH_DEEP_STATE_MAX"
+    ]
+  },
+  {
+    "config": "B_adaptive_frontier",
+    "seed": 404,
+    "iteration": 86,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "state_frontier_extend",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "B_adaptive_frontier",
+    "seed": 404,
+    "iteration": 173,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000086_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "B_adaptive_frontier",
+    "seed": 404,
+    "iteration": 261,
+    "depth": 17,
+    "transition": "16->17",
+    "previous_max_depth": 16,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000173_cov2_4ba221ad",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_17",
+      "PATH_DEEP_STATE_4"
+    ]
+  },
+  {
+    "config": "B_adaptive_frontier",
+    "seed": 404,
+    "iteration": 350,
+    "depth": 19,
+    "transition": "17->19",
+    "previous_max_depth": 17,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000261_cov2_ecb26476",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5\n",
+    "donor_payload": null,
+    "coverage_gained": 4,
+    "new_coverage_units": [
+      "DEPTH_18",
+      "DEPTH_19",
+      "PATH_DEEP_STATE_5",
+      "PATH_DEEP_STATE_MAX"
+    ]
+  },
+  {
+    "config": "B_adaptive_frontier",
+    "seed": 505,
+    "iteration": 86,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "state_frontier_extend",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "B_adaptive_frontier",
+    "seed": 505,
+    "iteration": 173,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000086_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "B_adaptive_frontier",
+    "seed": 505,
+    "iteration": 261,
+    "depth": 17,
+    "transition": "16->17",
+    "previous_max_depth": 16,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000173_cov2_4ba221ad",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_17",
+      "PATH_DEEP_STATE_4"
+    ]
+  },
+  {
+    "config": "B_adaptive_frontier",
+    "seed": 505,
+    "iteration": 350,
+    "depth": 19,
+    "transition": "17->19",
+    "previous_max_depth": 17,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000261_cov2_ecb26476",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5\n",
+    "donor_payload": null,
+    "coverage_gained": 4,
+    "new_coverage_units": [
+      "DEPTH_18",
+      "DEPTH_19",
+      "PATH_DEEP_STATE_5",
+      "PATH_DEEP_STATE_MAX"
+    ]
+  },
+  {
+    "config": "C_auto_delimiter",
+    "seed": 101,
+    "iteration": 86,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "state_frontier_extend",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "C_auto_delimiter",
+    "seed": 101,
+    "iteration": 173,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000086_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "C_auto_delimiter",
+    "seed": 101,
+    "iteration": 261,
+    "depth": 17,
+    "transition": "16->17",
+    "previous_max_depth": 16,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000173_cov2_4ba221ad",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_17",
+      "PATH_DEEP_STATE_4"
+    ]
+  },
+  {
+    "config": "C_auto_delimiter",
+    "seed": 101,
+    "iteration": 350,
+    "depth": 19,
+    "transition": "17->19",
+    "previous_max_depth": 17,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000261_cov2_ecb26476",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5\n",
+    "donor_payload": null,
+    "coverage_gained": 4,
+    "new_coverage_units": [
+      "DEPTH_18",
+      "DEPTH_19",
+      "PATH_DEEP_STATE_5",
+      "PATH_DEEP_STATE_MAX"
+    ]
+  },
+  {
+    "config": "C_auto_delimiter",
+    "seed": 202,
+    "iteration": 86,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "state_frontier_extend",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "C_auto_delimiter",
+    "seed": 202,
+    "iteration": 173,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000086_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "C_auto_delimiter",
+    "seed": 202,
+    "iteration": 261,
+    "depth": 17,
+    "transition": "16->17",
+    "previous_max_depth": 16,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000173_cov2_4ba221ad",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_17",
+      "PATH_DEEP_STATE_4"
+    ]
+  },
+  {
+    "config": "C_auto_delimiter",
+    "seed": 202,
+    "iteration": 350,
+    "depth": 19,
+    "transition": "17->19",
+    "previous_max_depth": 17,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000261_cov2_ecb26476",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5\n",
+    "donor_payload": null,
+    "coverage_gained": 4,
+    "new_coverage_units": [
+      "DEPTH_18",
+      "DEPTH_19",
+      "PATH_DEEP_STATE_5",
+      "PATH_DEEP_STATE_MAX"
+    ]
+  },
+  {
+    "config": "C_auto_delimiter",
+    "seed": 303,
+    "iteration": 86,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "state_frontier_extend",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "C_auto_delimiter",
+    "seed": 303,
+    "iteration": 173,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000086_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "C_auto_delimiter",
+    "seed": 303,
+    "iteration": 261,
+    "depth": 17,
+    "transition": "16->17",
+    "previous_max_depth": 16,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000173_cov2_4ba221ad",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_17",
+      "PATH_DEEP_STATE_4"
+    ]
+  },
+  {
+    "config": "C_auto_delimiter",
+    "seed": 303,
+    "iteration": 350,
+    "depth": 19,
+    "transition": "17->19",
+    "previous_max_depth": 17,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000261_cov2_ecb26476",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5\n",
+    "donor_payload": null,
+    "coverage_gained": 4,
+    "new_coverage_units": [
+      "DEPTH_18",
+      "DEPTH_19",
+      "PATH_DEEP_STATE_5",
+      "PATH_DEEP_STATE_MAX"
+    ]
+  },
+  {
+    "config": "C_auto_delimiter",
+    "seed": 404,
+    "iteration": 86,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "state_frontier_extend",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "C_auto_delimiter",
+    "seed": 404,
+    "iteration": 173,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000086_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "C_auto_delimiter",
+    "seed": 404,
+    "iteration": 261,
+    "depth": 17,
+    "transition": "16->17",
+    "previous_max_depth": 16,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000173_cov2_4ba221ad",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_17",
+      "PATH_DEEP_STATE_4"
+    ]
+  },
+  {
+    "config": "C_auto_delimiter",
+    "seed": 404,
+    "iteration": 350,
+    "depth": 19,
+    "transition": "17->19",
+    "previous_max_depth": 17,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000261_cov2_ecb26476",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5\n",
+    "donor_payload": null,
+    "coverage_gained": 4,
+    "new_coverage_units": [
+      "DEPTH_18",
+      "DEPTH_19",
+      "PATH_DEEP_STATE_5",
+      "PATH_DEEP_STATE_MAX"
+    ]
+  },
+  {
+    "config": "C_auto_delimiter",
+    "seed": 505,
+    "iteration": 86,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "state_frontier_extend",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "C_auto_delimiter",
+    "seed": 505,
+    "iteration": 173,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000086_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "C_auto_delimiter",
+    "seed": 505,
+    "iteration": 261,
+    "depth": 17,
+    "transition": "16->17",
+    "previous_max_depth": 16,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000173_cov2_4ba221ad",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_17",
+      "PATH_DEEP_STATE_4"
+    ]
+  },
+  {
+    "config": "C_auto_delimiter",
+    "seed": 505,
+    "iteration": 350,
+    "depth": 19,
+    "transition": "17->19",
+    "previous_max_depth": 17,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000261_cov2_ecb26476",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5\n",
+    "donor_payload": null,
+    "coverage_gained": 4,
+    "new_coverage_units": [
+      "DEPTH_18",
+      "DEPTH_19",
+      "PATH_DEEP_STATE_5",
+      "PATH_DEEP_STATE_MAX"
+    ]
+  },
+  {
+    "config": "D_full_phase7d",
+    "seed": 101,
+    "iteration": 86,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "state_frontier_extend",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "D_full_phase7d",
+    "seed": 101,
+    "iteration": 173,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000086_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "D_full_phase7d",
+    "seed": 101,
+    "iteration": 261,
+    "depth": 17,
+    "transition": "16->17",
+    "previous_max_depth": 16,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000173_cov2_4ba221ad",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_17",
+      "PATH_DEEP_STATE_4"
+    ]
+  },
+  {
+    "config": "D_full_phase7d",
+    "seed": 101,
+    "iteration": 350,
+    "depth": 19,
+    "transition": "17->19",
+    "previous_max_depth": 17,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000261_cov2_ecb26476",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5\n",
+    "donor_payload": null,
+    "coverage_gained": 4,
+    "new_coverage_units": [
+      "DEPTH_18",
+      "DEPTH_19",
+      "PATH_DEEP_STATE_5",
+      "PATH_DEEP_STATE_MAX"
+    ]
+  },
+  {
+    "config": "D_full_phase7d",
+    "seed": 202,
+    "iteration": 86,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "state_frontier_extend",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "D_full_phase7d",
+    "seed": 202,
+    "iteration": 173,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000086_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "D_full_phase7d",
+    "seed": 202,
+    "iteration": 261,
+    "depth": 17,
+    "transition": "16->17",
+    "previous_max_depth": 16,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000173_cov2_4ba221ad",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_17",
+      "PATH_DEEP_STATE_4"
+    ]
+  },
+  {
+    "config": "D_full_phase7d",
+    "seed": 202,
+    "iteration": 350,
+    "depth": 19,
+    "transition": "17->19",
+    "previous_max_depth": 17,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000261_cov2_ecb26476",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5\n",
+    "donor_payload": null,
+    "coverage_gained": 4,
+    "new_coverage_units": [
+      "DEPTH_18",
+      "DEPTH_19",
+      "PATH_DEEP_STATE_5",
+      "PATH_DEEP_STATE_MAX"
+    ]
+  },
+  {
+    "config": "D_full_phase7d",
+    "seed": 303,
+    "iteration": 86,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "state_frontier_extend",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "D_full_phase7d",
+    "seed": 303,
+    "iteration": 173,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000086_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "D_full_phase7d",
+    "seed": 303,
+    "iteration": 261,
+    "depth": 17,
+    "transition": "16->17",
+    "previous_max_depth": 16,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000173_cov2_4ba221ad",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_17",
+      "PATH_DEEP_STATE_4"
+    ]
+  },
+  {
+    "config": "D_full_phase7d",
+    "seed": 303,
+    "iteration": 350,
+    "depth": 19,
+    "transition": "17->19",
+    "previous_max_depth": 17,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000261_cov2_ecb26476",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5\n",
+    "donor_payload": null,
+    "coverage_gained": 4,
+    "new_coverage_units": [
+      "DEPTH_18",
+      "DEPTH_19",
+      "PATH_DEEP_STATE_5",
+      "PATH_DEEP_STATE_MAX"
+    ]
+  },
+  {
+    "config": "D_full_phase7d",
+    "seed": 404,
+    "iteration": 86,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "state_frontier_extend",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "D_full_phase7d",
+    "seed": 404,
+    "iteration": 173,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000086_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "D_full_phase7d",
+    "seed": 404,
+    "iteration": 261,
+    "depth": 17,
+    "transition": "16->17",
+    "previous_max_depth": 16,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000173_cov2_4ba221ad",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_17",
+      "PATH_DEEP_STATE_4"
+    ]
+  },
+  {
+    "config": "D_full_phase7d",
+    "seed": 404,
+    "iteration": 350,
+    "depth": 19,
+    "transition": "17->19",
+    "previous_max_depth": 17,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000261_cov2_ecb26476",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5\n",
+    "donor_payload": null,
+    "coverage_gained": 4,
+    "new_coverage_units": [
+      "DEPTH_18",
+      "DEPTH_19",
+      "PATH_DEEP_STATE_5",
+      "PATH_DEEP_STATE_MAX"
+    ]
+  },
+  {
+    "config": "D_full_phase7d",
+    "seed": 505,
+    "iteration": 86,
+    "depth": 15,
+    "transition": "14->15",
+    "previous_max_depth": 14,
+    "operator": "state_frontier_extend",
+    "parent_name": "seed6.txt",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_15",
+      "PATH_DEEP_STATE_2"
+    ]
+  },
+  {
+    "config": "D_full_phase7d",
+    "seed": 505,
+    "iteration": 173,
+    "depth": 16,
+    "transition": "15->16",
+    "previous_max_depth": 15,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000086_cov2_b3871cf9",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_16",
+      "PATH_DEEP_STATE_3"
+    ]
+  },
+  {
+    "config": "D_full_phase7d",
+    "seed": 505,
+    "iteration": 261,
+    "depth": 17,
+    "transition": "16->17",
+    "previous_max_depth": 16,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000173_cov2_4ba221ad",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "donor_payload": null,
+    "coverage_gained": 2,
+    "new_coverage_units": [
+      "DEPTH_17",
+      "PATH_DEEP_STATE_4"
+    ]
+  },
+  {
+    "config": "D_full_phase7d",
+    "seed": 505,
+    "iteration": 350,
+    "depth": 19,
+    "transition": "17->19",
+    "previous_max_depth": 17,
+    "operator": "state_frontier_extend",
+    "parent_name": "input_iter000261_cov2_ecb26476",
+    "parent_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4\n",
+    "mutated_payload": "NF01|DIAG|NEST=L1|STEP=1|STEP=2|STEP=3|STEP=4|STEP=5\n",
+    "donor_payload": null,
+    "coverage_gained": 4,
+    "new_coverage_units": [
+      "DEPTH_18",
+      "DEPTH_19",
+      "PATH_DEEP_STATE_5",
+      "PATH_DEEP_STATE_MAX"
+    ]
+  }
+]

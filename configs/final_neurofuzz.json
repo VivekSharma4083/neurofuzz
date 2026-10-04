@@ -1,0 +1,50 @@
+{
+  "system": "NeuroFuzz",
+  "phase": "9",
+  "version": "1.0.0",
+  "status": "frozen",
+  "description": "Final recommended NeuroFuzz production architecture determined by Phase 8 empirical ablation study.",
+  "configuration": {
+    "scheduler": "random",
+    "mutation_policy": "contextual",
+    "enable_splicing": true,
+    "donor_policy": "compatible",
+    "donor_prefix_weight": 3.0,
+    "donor_command_weight": 2.0,
+    "donor_protocol_weight": 1.0,
+    "donor_extra_field_weight": 1.0,
+    "donor_field_diff_penalty": 0.5,
+    "donor_depth_diff_penalty": 0.25,
+    "max_splice_size": 512,
+    "enable_frontier_extension": true,
+    "frontier_extension_rate": 0.20,
+    "frontier_rate_mode": "adaptive",
+    "min_frontier_rate": 0.02,
+    "max_frontier_rate": 0.30,
+    "frontier_decay_factor": 0.85,
+    "frontier_stagnation_threshold": 25,
+    "delimiter": "|",
+    "delimiter_mode": "auto",
+    "executor_type": "persistent",
+    "timeout": 1.0,
+    "boundary_aware": true,
+    "dictionary_probability": 0.30,
+    "mutation_epsilon": 0.20,
+    "mutation_learning_rate": 0.05,
+    "mutation_l2_reg": 0.001
+  },
+  "experimental_modes": {
+    "linear_bandit_scheduler": {
+      "scheduler": "linear_bandit",
+      "epsilon": 0.20,
+      "learning_rate": 0.05,
+      "l2_reg": 0.001,
+      "notes": "Evaluated in Phase 8 ablation (Config D). Available as optional mode; omitted from default due to 34% throughput overhead and lack of coverage advantage when StateFrontier is active."
+    },
+    "fixed_frontier": {
+      "frontier_rate_mode": "fixed",
+      "frontier_extension_rate": 0.20,
+      "notes": "Evaluated in Phase 8 ablation (Config C/J). Available as optional mode; adaptive mode is default due to waste-reduction after saturation."
+    }
+  }
+}

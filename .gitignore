@@ -1,0 +1,34 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C / C++ build artifacts
+*.o
+*.obj
+*.exe
+
+# Virtual environments & local Python tooling
+.venv/
+venv/
+ENV/
+env/
+*.env
+
+# IDE, Editor & OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Test & coverage caches
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Runtime crash output directory (preserve directory structure)
+crashes/*
+!crashes/.gitkeep

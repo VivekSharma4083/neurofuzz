@@ -1,0 +1,1 @@
+NF02|AUTH|USER=admin|TOKEN=adminit

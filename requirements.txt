@@ -1,0 +1,10 @@
+# NeuroFuzz Core & Experiment Dependencies
+# Core fuzzer relies primarily on the Python standard library with numpy for linear bandits:
+numpy>=1.22.0
+
+# Optional test runner:
+pytest>=7.0.0
+
+# Experiment analysis and publication plotting:
+pandas>=1.5.0
+matplotlib>=3.6.0

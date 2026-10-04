@@ -1,0 +1,220 @@
+{
+  "phase": "7C",
+  "description": "State-Sequence-Aware Frontier Mutation Experiment",
+  "iterations_per_trial": 25000,
+  "executor_type": "persistent",
+  "seeds": [
+    101,
+    202,
+    303,
+    404,
+    505
+  ],
+  "total_executions": 375000,
+  "total_elapsed_sec": 464.63,
+  "configurations": {
+    "A_random_fixed": {
+      "label": "A: Random + Fixed Baseline",
+      "trials": 5,
+      "mean_coverage": 61.8,
+      "std_coverage": 1.3,
+      "mean_max_depth": 14.8,
+      "std_max_depth": 1.1,
+      "mean_coverage_auc": 1483436.0,
+      "std_coverage_auc": 22752.8,
+      "mean_depth_auc": 364072.2,
+      "std_depth_auc": 19302.0,
+      "mean_unique_crashes": 188.0,
+      "std_unique_crashes": 124.25,
+      "mean_throughput": 1431.2,
+      "std_throughput": 238.9,
+      "transitions": {
+        "reach_depth_15": {
+          "count": 2,
+          "rate": 0.4,
+          "mean_iterations": 1456.5,
+          "times": [
+            2074,
+            839
+          ]
+        },
+        "reach_depth_16": {
+          "count": 2,
+          "rate": 0.4,
+          "mean_iterations": 13364.0,
+          "times": [
+            14339,
+            12389
+          ]
+        },
+        "reach_depth_17": {
+          "count": 0,
+          "rate": 0.0,
+          "mean_iterations": null,
+          "times": []
+        },
+        "reach_depth_18": {
+          "count": 0,
+          "rate": 0.0,
+          "mean_iterations": null,
+          "times": []
+        },
+        "reach_depth_19": {
+          "count": 0,
+          "rate": 0.0,
+          "mean_iterations": null,
+          "times": []
+        }
+      },
+      "frontier_telemetry": {
+        "mean_attempts": 0.0,
+        "mean_cov_discoveries": 0.0,
+        "mean_depth_discoveries": 0.0
+      }
+    },
+    "B_neurofuzz_full": {
+      "label": "B: NeuroFuzz Full (No Frontier)",
+      "trials": 5,
+      "mean_coverage": 64.8,
+      "std_coverage": 2.05,
+      "mean_max_depth": 15.2,
+      "std_max_depth": 0.84,
+      "mean_coverage_auc": 1551781.7,
+      "std_coverage_auc": 36497.5,
+      "mean_depth_auc": 374205.8,
+      "std_depth_auc": 18162.2,
+      "mean_unique_crashes": 217.2,
+      "std_unique_crashes": 225.53,
+      "mean_throughput": 700.1,
+      "std_throughput": 168.5,
+      "transitions": {
+        "reach_depth_15": {
+          "count": 4,
+          "rate": 0.8,
+          "mean_iterations": 4450.8,
+          "times": [
+            11116,
+            1480,
+            1754,
+            3453
+          ]
+        },
+        "reach_depth_16": {
+          "count": 2,
+          "rate": 0.4,
+          "mean_iterations": 5585.5,
+          "times": [
+            4620,
+            6551
+          ]
+        },
+        "reach_depth_17": {
+          "count": 0,
+          "rate": 0.0,
+          "mean_iterations": null,
+          "times": []
+        },
+        "reach_depth_18": {
+          "count": 0,
+          "rate": 0.0,
+          "mean_iterations": null,
+          "times": []
+        },
+        "reach_depth_19": {
+          "count": 0,
+          "rate": 0.0,
+          "mean_iterations": null,
+          "times": []
+        }
+      },
+      "frontier_telemetry": {
+        "mean_attempts": 0.0,
+        "mean_cov_discoveries": 0.0,
+        "mean_depth_discoveries": 0.0
+      }
+    },
+    "C_frontier_full": {
+      "label": "C: NeuroFuzz Full + Frontier Extension",
+      "trials": 5,
+      "mean_coverage": 72.0,
+      "std_coverage": 1.58,
+      "mean_max_depth": 19.0,
+      "std_max_depth": 0.0,
+      "mean_coverage_auc": 1699615.3,
+      "std_coverage_auc": 35559.2,
+      "mean_depth_auc": 473782.5,
+      "std_depth_auc": 0.0,
+      "mean_unique_crashes": 134.4,
+      "std_unique_crashes": 128.84,
+      "mean_throughput": 685.7,
+      "std_throughput": 64.2,
+      "transitions": {
+        "reach_depth_15": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 86.0,
+          "times": [
+            86,
+            86,
+            86,
+            86,
+            86
+          ]
+        },
+        "reach_depth_16": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 173.0,
+          "times": [
+            173,
+            173,
+            173,
+            173,
+            173
+          ]
+        },
+        "reach_depth_17": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 261.0,
+          "times": [
+            261,
+            261,
+            261,
+            261,
+            261
+          ]
+        },
+        "reach_depth_18": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0,
+          "times": [
+            350,
+            350,
+            350,
+            350,
+            350
+          ]
+        },
+        "reach_depth_19": {
+          "count": 5,
+          "rate": 1.0,
+          "mean_iterations": 350.0,
+          "times": [
+            350,
+            350,
+            350,
+            350,
+            350
+          ]
+        }
+      },
+      "frontier_telemetry": {
+        "mean_attempts": 1432.0,
+        "mean_cov_discoveries": 0.0,
+        "mean_depth_discoveries": 0.0
+      }
+    }
+  }
+}
